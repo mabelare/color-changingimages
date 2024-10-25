@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=gi, initial-scale=1.0" />
+    <title>Images color change on scroll</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      
+        <div class="observed-wrapper" data-color="#f5e1b9">
+          <img src="image/image.png" alt="backstage talks" class="observed" />
+        </div>
+
+        <h1>Issue #1 is sold out</h1>
+        <h5>if you are lucky,you may get the last pieces in Selected stores</h5>
+
+
+      <div class="observed-wrapper" data-color="#f15b82">
+        <img src="image2/image.png" alt="backstage talks" class="observed" />
+      </div>
+      <h1>Issue #7 is sold out</h1>
+      <h5>
+        if you are lucky,you may get the last pieces in <em>Selected stores</em>
+      </h5>
+
+      <div class="observed-wrapper" data-color="#fff">
+        <img src="image3/image.png" alt="backstage talks" class="observed" />
+      </div>
+      <h1>Issue #6 is sold out</h1>
+      <h5>if you are lucky,you may get the last pieces in Selected stores</h5>
+
+
+      
+
+      <div class="observed-wrapper" data-color="#00c1b5">
+        <img src="image4/image.png" alt="backstage talks" class="observed" />
+      </div>
+      <h1>Issue #5 is sold out</h1>
+      <h5>if you are lucky,you may get the last pieces in <em>Selected stores</em></h5>
+
+
+      <div class="observed-wrapper" data-color="#ff651a">
+        <img src="image5/image.png" alt="backstage talks" class="observed" />
+      </div>
+    </div>
+    <h2>Issue #4</h2>
+    <h4><em>BUY HERE</em></h4>
+    <p>or in <em>selected stores</em></p>
+
+
+    </div>
+
+
+    <div class="observed-wrapper" data-color="#ffbe00">
+        <img src="image6/image.png" alt="backstage talks" class="observed" />
+      </div>
+      <h2>Issue #3</h2>
+      <h4><em>BUY HERE</em></h4>
+      <p>or in <em>selected stores</em></p>
+    </div>
+
+
+    <div class="observed-wrapper" data-color="#1d3fbb">
+        <img src="image7/image.png" alt="backstage talks" class="observed" />
+      </div>
+      <h2>Issue #2</h2>
+      <h4><em>BUY HERE</em></h4>
+      <p>or in <em>selected stores</em></p>
+
+
+
+      <div class="observed-wrapper" data-color="#e30512">
+        <img src="image8/image.png" alt="backstage talks" class="observed" />
+      </div>
+      <h2>Issue #1</h2>
+      <h4><em>BUY HERE</em></h4>
+      <p>or in <em>selected stores</em></p>
+
+    </div>
+    </div>
+
+    <script>
+      const wrappers = document.querySelectorAll(".observed-wrapper");
+
+      const observedOptions = {
+        root: null,
+        threshold: 0.1,
+      };
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const color = entry.target.getAttribute("data-color");
+            document.body.style.backgroundColor = color;
+            entry.target.classList.add("intersecting");
+          } else {
+            entry.target.classList.remove("intersecting");
+          }
+        });
+      }, observedOptions);
+
+      wrappers.forEach((wrapper) => {
+        observer.observe(wrapper);
+      });
+    </script>
+  </body>
+</html>
