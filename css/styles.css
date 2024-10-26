@@ -19,11 +19,11 @@ img {
   margin-top: 40px;
   padding: 10px;
   margin-bottom: 0px;
-  transition: background-color 6s ease-in;
+  transition: background-color 6s ease-in-out;
   text-align: center;
 }
 .observed-wrapper.intersecting {
-  transition: background-color 6s ease-in;
+  transition: background-color 6s ease-in-out;
 }
 
 em {
