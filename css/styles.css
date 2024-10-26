@@ -2,236 +2,236 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  transition: background-color 0.5s ease;
-  display: flex;
-  flex-direction: column;
 }
 .container {
-  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 img {
   height: auto;
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
 }
 
 .observed-wrapper {
-  margin-top: 70px;
-  transition: background-color 0.5s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin-top: 40px;
+  padding: 10px;
+  margin-bottom: 0px;
+  transition: background-color 6s ease;
+  text-align: center;
+}
+.observed-wrapper.intersecting {
+  transition: background-color 6s ease;
 }
 
-.observed {
-  max-height: 100%;
-}
 em {
   color: #fff;
   font-style: normal;
 }
-@media screen and (min-width: 1279px) {
+
+h1,
+h2,
+h4,
+h5,
+p {
+  margin: 5px 0;
+}
+
+h1 {
+  font-size: 15px;
+}
+h2 {
+  font-size: 13px;
+}
+h4 {
+  font-size: 13px;
+}
+h5 {
+  font-size: 10px;
+}
+p {
+  font-size: 10px;
+}
+a {
+  color: black;
+}
+li {
+  list-style: none;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Small screens (e.g., mobile) */
+@media screen and (max-width: 600px) {
+  .observed-wrapper {
+    margin-bottom: 120px; /* Less spacing on smaller screens */
+    padding: 8px;
+    margin-top: 140px;
+  }
   img {
     width: 60%;
   }
-  h2 {
-    margin-top: 0;
-    font-size: 18px;
-    margin-left: 380px;
-    margin-bottom: 20px;
-  }
-
-  p {
-    margin-left: 350px;
-    margin-top: 0;
-  }
-
-  h5 {
-    margin-left: 170px;
-    font-size: 15px;
-  }
   h1 {
-    margin-left: 600px;
-    margin-top: 0;
-    font-size: 20px;
+    font-size: 15px;
+    margin-bottom: 15px;
   }
-
+  h2 {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
   h4 {
-    margin-left: 380px;
+    font-size: 13px;
+    margin-bottom: 15px;
   }
-}
-
-@media screen and (max-width: 1300px) {
-  img {
-    width: 60%;
-  }
-  h2 {
-    margin-top: 0;
-    font-size: 25px;
-    margin-left: 450px;
-    margin-bottom: 20px;
-  }
-
-  p {
-    margin-left: 420px;
-    margin-top: 0;
-    font-size: 20px;
-  }
-
   h5 {
-    margin-left: 200px;
-    font-size: 20px;
-  }
-  h1 {
-    margin-left: 380px;
-    margin-top: 0;
-    font-size: 25px;
-  }
-
-  h4 {
-    margin-left: 450px;
-    font-size: 20px;
-  }
-}
-
-@media screen and (min-width: 810px) and (max-width: 1300px) {
-  img {
-    width: 60%;
-  }
-  h2 {
-    margin-top: 0;
-    font-size: 18px;
-    margin-left: 400px;
-    margin-bottom: 20px;
-  }
-
-  p {
-    margin-left: 350px;
-    margin-top: 0;
-  }
-
-  h5 {
-    margin-left: 210px;
-    font-size: 15px;
-  }
-  h1 {
-    margin-left: 350px;
-    margin-top: 0;
-    font-size: 20px;
-  }
-
-  h4 {
-    margin-left: 380px;
-  }
-}
-
-@media screen and (max-width: 770px) {
-  img {
-    width: 60%;
-  }
-  h2 {
-    margin-top: 0;
-    font-size: 18px;
-    margin-left: 270px;
-    margin-bottom: 20px;
-  }
-
-  p {
-    margin-left: 230px;
-    margin-top: 0;
-  }
-
-  h5 {
-    margin-left: 120px;
-    font-size: 15px;
-  }
-  h1 {
-    margin-left: 280px;
-    margin-top: 0;
-    font-size: 20px;
-  }
-
-  h4 {
-    margin-left: 255px;
-  }
-}
-
-@media screen and (max-width: 550px) {
-  img {
-    width: 80%;
-  }
-  h2 {
-    margin-top: 0;
-    font-size: 18px;
-    margin-left: 220px;
-    margin-bottom: 20px;
-  }
-  h3 {
-    font-size: 15px;
-    margin-top: 0;
-    margin-left: 100px;
-    margin-bottom: 20px;
+    font-size: 13px;
   }
   p {
-    margin-left: 170px;
-    margin-top: 0;
-  }
-
-  h5 {
-    margin-left: 15px;
     font-size: 15px;
   }
-  h1 {
-    margin-left: 140px;
-    margin-top: 0;
-    font-size: 20px;
+  .footer {
+    font-size: 15px;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
   }
   h6 {
-    font-size: 15px;
-    margin-left: 70px;
-    margin-top: 0;
+    margin-top: -10px;
   }
-  h4 {
-    margin-left: 205px;
+  .section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section p {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .col h3 {
+    margin-right: 160px;
+    margin-bottom: -70px;
   }
 }
 
-@media screen and (max-width: 450px) {
+/* Medium screens (e.g., tablets) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .observed-wrapper {
+    margin-bottom: 120px;
+    padding: 10px;
+    margin-top: 140px;
+  }
   img {
-    width: 80%;
+    width: 50%;
+  }
+  h1 {
+    font-size: 15px;
+    margin-bottom: 15px;
   }
   h2 {
-    margin-top: 0;
-    font-size: 18px;
-    margin-left: 160px;
-    margin-bottom: 20px;
-  }
-  h3 {
     font-size: 15px;
-    margin-top: 0;
-    margin-left: 100px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+  }
+  h4 {
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+  h5 {
+    font-size: 13px;
   }
   p {
-    margin-left: 130px;
-    margin-top: 0;
+    font-size: 15px;
   }
 
-  h5 {
+  footer {
+    font-size: 15px;
+    width: 40%;
+    margin-right: 340px;
+    line-height: 1.5;
+  }
+  h6 {
+    margin-top: -10px;
+  }
+  .footer {
+    margin-top: -100px;
+  }
+  .section a {
     margin-left: 20px;
-    font-size: 10px;
+  }
+  .section p {
+    font-size: 15px;
+    font-weight: 600;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  .col h3 {
+    font-size: 25px;
+    margin-right: 340px;
+    margin-bottom: -300px;
+  }
+}
+
+/* Large screens (e.g., desktops) */
+@media screen and (min-width: 1025px) {
+  .observed-wrapper {
+    margin-bottom: 120px;
+    padding: 12px;
+    margin-top: 140px;
+    max-width: 800px;
+  }
+  img {
+    width: 50%;
   }
   h1 {
-    margin-left: 100px;
-    margin-top: 0;
-    font-size: 15px;
+    font-size: 20px;
+    margin-bottom: 15px;
   }
-  h6 {
-    font-size: 15px;
-    margin-left: 70px;
-    margin-top: 0;
+  h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
   }
   h4 {
-    margin-left: 155px;
+    font-size: 17px;
+    margin-bottom: 15px;
+  }
+  h5 {
+    font-size: 17px;
+  }
+  p {
+    font-size: 20px;
+  }
+  footer {
+    font-size: 15px;
+    width: 50%;
+    margin-right: 490px;
+    line-height: 1.5;
+  }
+  h6 {
+    margin-top: -10px;
+  }
+  .footer {
+    margin-top: -100px;
+  }
+  .section a {
+    margin-left: 20px;
+  }
+  .section p {
+    font-size: 15px;
+    font-weight: 600;
+    margin-right: 20px;
+  }
+  .col h3 {
+    font-size: 30px;
+    margin-right: 340px;
+    margin-bottom: -300px;
+  }
+  .section {
+    margin-bottom: 30px;
   }
 }
